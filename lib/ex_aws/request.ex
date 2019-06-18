@@ -86,7 +86,7 @@ defmodule ExAws.Request do
 
         {:error, %{reason: reason}} ->
           Logger.warn(
-            "ExAws: HTTP ERROR: #{inspect(reason)} for URL: #{inspect(safe_url)} ATTEMPT: #{
+            "ExAws: HTTP ERROR: #{inspect(reason)} for URL: #{inspect(safe_url)}  req_body: #{inspect(req_body)} method: #{inspect(method)} ATTEMPT: #{
               attempt
             }"
           )
